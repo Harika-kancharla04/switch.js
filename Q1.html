@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Design a program that calculates discounts based on product categories (Electronics, Clothing, Grocery). Each
+        category has specific discount rates for different products:
+
+        Electronics: Mobile - 5%, Laptop - 10%
+
+        Clothing: Men - 15%, Women - 20%
+
+        Grocery: Fruits - 5%, Vegetables - 10%
+
+
+        Hint: Implement nested switch cases to handle products within each category and apply the discounts accordingly.
+        Display the discount rate for the selected product.</h2>
+
+        <h3>Console for output</h3>
+
+
+
+
+    <script>
+        category = prompt("Enter category(Electronics,Clothing,Grocery):").toLowerCase();
+        let product;
+        let discount;
+        switch (category) {
+            case "electronics":
+                product = prompt("Enter the product(Mobile,Laptop):").toLowerCase();
+                switch (product) {
+                    case "mobile":
+                        discount = 5;
+                        break;
+                    case "laptop":
+                        discount = 10;
+                        break;
+                    default:
+                        console.log("enter valid products like Mobile,Laptop in electronics");
+                }
+            break;
+            case "clothing":
+                product = prompt("Enter the product(Men,Women):").toLowerCase();
+                switch (product) {
+                    case "men":
+                        discount = 15;
+                        break;
+                    case "women":
+                        discount = 20;
+                        break;
+                    default:
+                        console.log("enter valid product like Men,Women in clothing");
+                }
+            break;
+            case "grocery":
+                product = prompt("Enter the product(Fruits,Vegetables):").toLowerCase();
+                switch (product) {
+                    case "fruits":
+                        discount = 5;
+                        break;
+                    case "vegetables":
+                        discount = 10;
+                        break;
+                    default:
+                        console.log("enter valid product like Fruits,Vegetables in grocery");
+                }
+            break;
+            default: 
+            discount=0;
+            console.log("enter correct category")
+            
+        }
+        if(discount>0){
+            console.log(`Discount for ${product} in ${category} is ${discount}%`);
+        }
+    </script>
+</body>
+
+</html>

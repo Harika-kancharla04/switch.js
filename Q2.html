@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Movie Ticket Booking System
+
+        Problem: Create a program for booking movie tickets where a user chooses a movie and seat category. The options
+        should be:
+
+        Movie:
+
+        Action: Standard Seat - 10rs, VIP Seat - 20rs
+
+        Comedy: Standard Seat - 8rs, VIP Seat - 15rs
+
+        Drama: Standard Seat -6rs, VIP Seat - 12rs</h2>
+
+    <h4>console for output</h4>
+
+
+    <script>
+        movie = prompt("Enter movie category(Action,Comedy,Drama:)").toLowerCase();
+        let seatCategory;
+        let ticketPrice;
+        switch (movie) {
+            case "action":
+                seatCategory = prompt("enter seat category(Standard,VIP:)").toLowerCase();
+                switch (seatCategory) {
+                    case "standard":
+                        ticketPrice = 10;
+                        break;
+                    case "vip":
+                        ticketPrice = 20;
+                        break;
+                    default:
+                        console.log("enter correct seat category!!");
+                        ticketPrice=null;
+                }
+                break;
+            case "comedy":
+                seatCategory = prompt("enter seat category(Standard,VIP:)").toLowerCase();
+                switch (seatCategory) {
+                    case "standard":
+                        ticketPrice = 10;
+                        break;
+                    case "vip":
+                        ticketPrice = 20;
+                        break;
+                    default:
+                        console.log("enter correct seat category!!");
+                        ticketPrice=null;
+                }
+                break;
+            case "drama":
+                seatCategory = prompt("enter seat category(Standard,VIP:)").toLowerCase();
+                switch (seatCategory) {
+                    case "standard":
+                        ticketPrice = 10;
+                        break;
+                    case "vip":
+                        ticketPrice = 20;
+                        break;
+                    default:
+                        console.log("enter correct seat category!!");
+                        ticketPrice=null;
+                }
+                break;
+            default:
+                console.log("enter correct Movie category");
+                ticketPrice=null;
+
+
+        }
+        if (ticketPrice != null){
+            console.log(`The ticket price for ${seatCategory} seat for ${movie} movie is ${ticketPrice}rs`);
+
+        }    
+    </script>
+</body>
+
+</html>

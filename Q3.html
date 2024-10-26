@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Write a travel booking system that allows a user to select a mode of transport (Flight, Train, Bus) and then
+        choose a class or category:
+
+        Flight: Economy, Business
+
+        Train: Sleeper, AC Class
+
+        Bus: Standard, Luxury
+
+
+        Hint: Based on the mode of transport and class selected, display the approximate cost of travel. Use nested
+        switches for the class/category selection within each transport mode.</h2>
+
+
+    <h4>Console for output</h4>
+
+
+    <script>
+        modeOfTransport = prompt("Enter mode of transport(Flight,Train,Bus):").toLowerCase();
+        let selectClass;
+        let cost;
+        switch (modeOfTransport) {
+            case "flight":
+                selectClass = prompt("Enter class to travel(Economy,Business):").toLowerCase();
+                switch (selectClass) {
+                    case "economy":
+                        cost = 6000;
+                        break;
+                    case "business":
+                        cost = 12500;
+                        break;
+                    default:
+                        console.log("Enter correct class!!");
+                        cost = 0;
+                }
+                break;
+            case "train":
+                selectClass = prompt("Enter class to travel(Sleeper,AC):").toLowerCase();
+                switch (selectClass) {
+                    case "sleeper":
+                        cost = 400;
+                        break;
+                    case "ac":
+                        cost = 1500;
+                        break;
+                    default:
+                        console.log("Enter correct class!!");
+                        cost = 0;
+                }
+                break;
+            case "bus":
+                selectClass = prompt("Enter class to travel(Standard,Luxury):").toLowerCase();
+                switch (selectClass) {
+                    case "standard":
+                        cost = 500;
+                        break;
+                    case "luxury":
+                        cost = 700;
+                        break;
+                    default:
+                        console.log("Enter correct class!!");
+                        cost = 0;
+                }
+                break;
+            default:
+            console.log('Enter correct mode of transport!!')
+        }
+        if(cost>0){
+            console.log(`Total cost for ${selectClass} in ${modeOfTransport} is ${cost}rs `);
+        }
+    </script>
+</body>
+
+</html>
